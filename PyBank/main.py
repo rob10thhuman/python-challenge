@@ -44,8 +44,12 @@ with open(csvpath) as csvfile:
 	print(resAvg)
 	print(max(res))
 	index = res.index(max(res))+1
+	index2 = res.index(max(res))
 	indexMin = res.index(min(res))+1
+	indexMin2 = res.index(min(res))
 	print(index)
+	print('indexValue')
+	print(res[index2])
 	print(indexMin)
 	maxMonth = months[index]
 	minMonth = months[indexMin]
@@ -55,8 +59,8 @@ print("----------------------------")
 print("Total Months: " + str(lines))
 print("Total: " + str(total))
 print("Average  Change: " + str(resAvg)) 
-print("Greatest Increase in Profits: " + str(maxMonth)) 
-print("Greatest Decrease in Profits: " + str(minMonth)) 
+print("Greatest Increase in Profits: " + str(maxMonth) + " ($" + str(res[index2]) + ")") 
+print("Greatest Decrease in Profits: " + str(minMonth) + " ($" + str(res[indexMin2]) + ")") 
 
 sys.stdout = open('log.txt', 'w')
 print("Financial Analysis")

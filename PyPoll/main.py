@@ -37,8 +37,7 @@ with open(csvpath) as csvfile:
 	print(f"CSV Header: {csv_header}")
 
 	lines = 0 
-	can1 = 0
-	
+		
 	for row in csvreader:
 		lines = lines + 1
 		if row[2] not in unique:
